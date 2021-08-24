@@ -105,9 +105,9 @@ def güncelle_sorumlu(request, pk):
             recipient = form.cleaned_data.get('email')
 
             send_mail(
-                'Subject here',
-                'Here is the message.',
-                'hesapacmakicin23@gmail.com',
+                'Başlık',
+                'Bir değişiklik yaşandı.',
+                'Buraya kendi emailinizi yazıyorsunuzç',
                 [recipient],
                 fail_silently=False,
             )
