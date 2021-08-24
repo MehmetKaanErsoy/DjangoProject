@@ -1,0 +1,39 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+</head>
+<body>
+<div class="card-header"
+     style="width: 400px;height: 350px;margin-left: 500px; background-color: whitesmoke;margin-top: 100px">
+    <p style="text-align: center;font-size: 25px;">Parolanızı Yenileyiniz.</p>
+    <form method="post">
+        {% csrf_token %}
+        <h4 class="row" style="font-size: 15px;margin-left: 62px;margin-top: 40px">Yeni parolanız <p style="color: red">
+            *</p></h4>
+        <div class="card-body" style="margin-left: 40px;margin-bottom: 20px;margin-top: -35px">
+            <i class="fas fa-key"></i>
+            {{ form.new_password1 }}
+        </div>
+        <h4 class="row" style="font-size: 15px;margin-left: 62px;margin-top: -20px">Parola Onayı<p style="color: red">*</p></h4>
+        <div class="card-body" style="margin-left: 40px;margin-bottom: 20px;margin-top: -35px">
+            <i class="fas fa-key"></i>
+            {{ form.new_password2 }}
+        </div>
+        <button type="submit" class="btn btn-info" style="margin-left: 30%">Şifreyi Değiştir</button>
+    </form>
+
+</div>
+<script src="{% static 'plugins/ekko-lightbox/ekko-lightbox.js' %}"></script>
+<script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'dist/js/adminlte.min.js' %}"></script>
+</body>
+</html>

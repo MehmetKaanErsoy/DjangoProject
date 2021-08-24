@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+<link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+<style>
+    * {
+        font-family: 'Quicksand', sans-serif;
+    }
+</style>
+<body style="text-align: center;padding: 40px">
+<div class="card-gray" style="background: white;padding: 55px;border-radius: 4px;display: inline-block">
+    <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+        <i class="checkmark" style="color:#9ABC66;font-size: 100px;line-height: 200px;margin-left: -15px">✓</i>
+    </div>
+    <h1 style="color: #88B04B;font-weight: 900;font-size: 40px;margin-bottom: 10px;">Tebrikler!</h1>
+    <p style="color:#404F5E;font-size: 19px">Parolanızı başarı ile oluşturdunuz. Anasayfaya gitmek için <a
+            style="text-decoration: none" href="{% url 'login' %}">Tıklayınız.</a>
+    </p>
+</div>
+<script src="{% static 'plugins/ekko-lightbox/ekko-lightbox.js' %}"></script>
+<script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'dist/js/adminlte.min.js' %}"></script>
+</body>
+</html>
